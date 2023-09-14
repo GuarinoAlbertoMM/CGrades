@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TeacherWS));
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -38,7 +39,13 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tablasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saliToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.asignarCalificacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label5
@@ -143,6 +150,50 @@
             this.button4.Text = "Nuevo";
             this.button4.UseVisualStyleBackColor = false;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.Color.DarkGray;
+            this.menuStrip1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.archivoToolStripMenuItem,
+            this.tablasToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1924, 30);
+            this.menuStrip1.TabIndex = 20;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // archivoToolStripMenuItem
+            // 
+            this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.saliToolStripMenuItem});
+            this.archivoToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
+            this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(89, 26);
+            this.archivoToolStripMenuItem.Text = "Archivo";
+            // 
+            // tablasToolStripMenuItem
+            // 
+            this.tablasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.asignarCalificacionesToolStripMenuItem});
+            this.tablasToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
+            this.tablasToolStripMenuItem.Name = "tablasToolStripMenuItem";
+            this.tablasToolStripMenuItem.Size = new System.Drawing.Size(77, 26);
+            this.tablasToolStripMenuItem.Text = "Tablas";
+            // 
+            // saliToolStripMenuItem
+            // 
+            this.saliToolStripMenuItem.Name = "saliToolStripMenuItem";
+            this.saliToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.saliToolStripMenuItem.Text = "Salir";
+            // 
+            // asignarCalificacionesToolStripMenuItem
+            // 
+            this.asignarCalificacionesToolStripMenuItem.Name = "asignarCalificacionesToolStripMenuItem";
+            this.asignarCalificacionesToolStripMenuItem.Size = new System.Drawing.Size(272, 26);
+            this.asignarCalificacionesToolStripMenuItem.Text = "Asignar calificaciones";
+            // 
             // TeacherWS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
@@ -157,12 +208,17 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label5);
+            this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "TeacherWS";
             this.Text = "TeacherWS";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -180,5 +236,10 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tablasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saliToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem asignarCalificacionesToolStripMenuItem;
     }
 }

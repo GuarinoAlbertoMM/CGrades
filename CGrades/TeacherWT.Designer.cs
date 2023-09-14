@@ -238,8 +238,8 @@
             // crearEstudiantesToolStripMenuItem
             // 
             this.crearEstudiantesToolStripMenuItem.Name = "crearEstudiantesToolStripMenuItem";
-            this.crearEstudiantesToolStripMenuItem.Size = new System.Drawing.Size(231, 26);
-            this.crearEstudiantesToolStripMenuItem.Text = "Crear estudiantes";
+            this.crearEstudiantesToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
+            this.crearEstudiantesToolStripMenuItem.Text = "Crear asignaturas";
             // 
             // button4
             // 
