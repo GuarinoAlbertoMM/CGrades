@@ -234,6 +234,7 @@
             this.tablasToolStripMenuItem.Name = "tablasToolStripMenuItem";
             this.tablasToolStripMenuItem.Size = new System.Drawing.Size(77, 26);
             this.tablasToolStripMenuItem.Text = "Tablas";
+            this.tablasToolStripMenuItem.Click += new System.EventHandler(this.tablasToolStripMenuItem_Click);
             // 
             // crearEstudiantesToolStripMenuItem
             // 

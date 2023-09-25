@@ -22,5 +22,10 @@ namespace CGrades
             e.Cancel = true;
             this.Visible = false;
         }
+
+        private void tablasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

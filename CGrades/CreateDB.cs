@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace CGrades
 {
@@ -102,7 +103,7 @@ namespace CGrades
             else
             {
                 // Las tablas ya existen, no es necesario crearlas
-                Console.WriteLine("Las tablas ya existen en la base de datos.");
+                MessageBox.Show("Las tablas ya existen en la base de datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

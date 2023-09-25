@@ -8,9 +8,9 @@ using System.Data.SqlClient;
 
 namespace CGrades
 {
-    public static class DBFunctions
+    public class DBFunctions
     {
-        private static string connectionString = "Data Source =GUARI-PC\\SQLEXPRESS; Initial Catalog = Clientes ;Integrated Security=true"; // Reemplaza con tu cadena de conexión
+        private static string connectionString = "Data Source =GUARI-PC\\SQLEXPRESS; Initial Catalog = Clientes ;Integrated Security=true";
 
         //Conexion a la base de datos
         public static SqlConnection CreateConnection()
