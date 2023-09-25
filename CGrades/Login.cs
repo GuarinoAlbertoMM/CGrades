@@ -19,6 +19,7 @@ namespace CGrades
         AdminWT adminWT = new AdminWT();
         AdminWS adminWS = new AdminWS();
         TeacherWT teacherWT = new TeacherWT();
+        TeacherWS teacherWS = new TeacherWS();
         StudentWS studentWS = new StudentWS();
         public Login()
         {
@@ -42,7 +43,7 @@ namespace CGrades
 
         public int userId()
         {
-            int sqlId = 1;
+            int sqlId = 2;
 
             return sqlId;
         }
@@ -52,11 +53,11 @@ namespace CGrades
 
             if (role == 1)
             {
-                adminWT.Visible = true;
+                adminWS.Visible = true;
             }
             if (role == 2)
             {
-                teacherWT.Visible = true;
+                teacherWS.Visible = true;
             }
             if (role == 3)
             {

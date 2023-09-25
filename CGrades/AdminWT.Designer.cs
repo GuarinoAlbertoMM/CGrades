@@ -91,6 +91,7 @@
             this.Column3});
             this.dataGridView1.Location = new System.Drawing.Point(119, 263);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(992, 490);
@@ -265,6 +266,7 @@
             this.Column1.HeaderText = "Id";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Column1.Width = 125;
             // 
@@ -274,6 +276,7 @@
             this.Column2.HeaderText = "Id de usuario";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Column2.Width = 175;
             // 
@@ -283,6 +286,7 @@
             this.Column4.HeaderText = "Usuario";
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             this.Column4.Width = 175;
             // 
             // Column5
@@ -291,6 +295,7 @@
             this.Column5.HeaderText = "Contraseña";
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             this.Column5.Width = 175;
             // 
             // Column3
@@ -299,6 +304,7 @@
             this.Column3.HeaderText = "Nombre completo";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Column3.Width = 250;
             // 

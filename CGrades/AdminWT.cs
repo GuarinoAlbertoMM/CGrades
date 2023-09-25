@@ -22,7 +22,7 @@ namespace CGrades
         string connectionString = "Data Source=GUARI-PC\\SQLEXPRESS;Initial Catalog=CGrades;Integrated Security=True;";
         private int selectedUserId = -1;
 
-        public void DisplayTableData(string tableName)
+        public void DisplayTableData()
         {
             try
             {
@@ -115,7 +115,7 @@ namespace CGrades
 
         private void AdminWT_Load(object sender, EventArgs e)
         {
-            DisplayTableData("teachers");
+            DisplayTableData();
         }
 
         private void tablasToolStripMenuItem_Click(object sender, EventArgs e)
@@ -181,7 +181,7 @@ namespace CGrades
                     selectedUserId = -1;
 
                     // Actualizar la vista de datos en el DataGridView
-                    DisplayTableData("teachers");
+                    DisplayTableData();
                 }
                 else
                 {
@@ -232,7 +232,7 @@ namespace CGrades
                         textBox3.Clear();
                         textBox4.Clear();
 
-                        DisplayTableData("teachers");
+                        DisplayTableData();
 
                         MessageBox.Show("Datos guardados correctamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -306,7 +306,7 @@ namespace CGrades
                             MessageBox.Show("Registro eliminado correctamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             // Actualizar la vista de datos en el DataGridView después de eliminar
-                            DisplayTableData("teachers");
+                            DisplayTableData();
                         }
                     }
                 }
