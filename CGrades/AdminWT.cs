@@ -264,5 +264,62 @@ namespace CGrades
             textBox3.Clear();
             textBox4.Clear();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Verificar si se ha seleccionado una fila en el DataGridView
+                if (dataGridView1.SelectedRows.Count > 0)
+                {
+                    // Mostrar un cuadro de diálogo de confirmación
+                    DialogResult result = MessageBox.Show("¿Está seguro de que desea eliminar este registro?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    // Verificar la respuesta del usuario
+                    if (result == DialogResult.Yes)
+                    {
+                        // Obtener el ID del usuario seleccionado desde la fila seleccionada
+                        int selectedUserId = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["Column2"].Value);
+
+                        using (SqlConnection connection = new SqlConnection(connectionString))
+                        {
+                            connection.Open();
+
+                            // Consulta SQL para eliminar el registro de la tabla "teachers"
+                            string deleteTeacherQuery = "DELETE FROM teachers WHERE user_id = @UserID";
+
+                            using (SqlCommand teacherCommand = new SqlCommand(deleteTeacherQuery, connection))
+                            {
+                                teacherCommand.Parameters.AddWithValue("@UserID", selectedUserId);
+                                teacherCommand.ExecuteNonQuery();
+                            }
+
+                            // Consulta SQL para eliminar el registro de la tabla "users"
+                            string deleteUserQuery = "DELETE FROM users WHERE id = @UserID";
+
+                            using (SqlCommand userCommand = new SqlCommand(deleteUserQuery, connection))
+                            {
+                                userCommand.Parameters.AddWithValue("@UserID", selectedUserId);
+                                userCommand.ExecuteNonQuery();
+                            }
+
+                            MessageBox.Show("Registro eliminado correctamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            // Actualizar la vista de datos en el DataGridView después de eliminar
+                            DisplayTableData("teachers");
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, seleccione un registro para eliminar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                // Manejo de errores, muestra un mensaje en caso de error
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
