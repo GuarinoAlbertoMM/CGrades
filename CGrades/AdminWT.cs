@@ -115,6 +115,16 @@ namespace CGrades
 
         private void AdminWT_Load(object sender, EventArgs e)
         {
+            // Deshabilitar los TextBox
+            textBox2.Enabled = false;   //usuario
+            textBox3.Enabled = false;   //contra
+            textBox4.Enabled = false;   //nombre
+
+            // Limpiar los TextBox
+            textBox2.Clear();
+            textBox3.Clear();
+            textBox4.Clear();
+
             DisplayTableData();
         }
 

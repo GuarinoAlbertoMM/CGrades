@@ -26,6 +26,9 @@ namespace CGrades
             InitializeComponent();
         }
 
+        // Cadena de conexión a la base de datos
+        string connectionString = "Data Source=GUARI-PC\\SQLEXPRESS;Initial Catalog=CGrades;Integrated Security=True;";
+
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -41,11 +44,26 @@ namespace CGrades
 
         }
 
-        public int userId()
+        public object VerifiedUser(string username, string password)
         {
-            int sqlId = 2;
 
-            return sqlId;
+            string query = "SELECT * FROM users WHERE username = @Username AND password = @Password";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    
+                    command.Parameters.AddWithValue("@Username", username);
+                    command.Parameters.AddWithValue("@Password", password);
+
+                    var valort = command.ExecuteScalar();
+                }
+            }
+
+            return valort;
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -53,11 +71,11 @@ namespace CGrades
 
             if (role == 1)
             {
-                adminWS.Visible = true;
+                adminWT.Visible = true;
             }
             if (role == 2)
             {
-                teacherWS.Visible = true;
+                teacherWT.Visible = true;
             }
             if (role == 3)
             {
@@ -70,6 +88,11 @@ namespace CGrades
         {
             CreateDB dbCreator = new CreateDB();
             dbCreator.DBCreation();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            VerifiedUser(textBox1.Text,textBox2.Text);
         }
     }
 }

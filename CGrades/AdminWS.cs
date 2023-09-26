@@ -66,6 +66,16 @@ namespace CGrades
 
         private void AdminWS_Load(object sender, EventArgs e)
         {
+            // Deshabilitar los TextBox
+            textBox2.Enabled = false;   //usuario
+            textBox3.Enabled = false;   //contra
+            textBox4.Enabled = false;   //nombre
+
+            // Limpiar los TextBox
+            textBox2.Clear();
+            textBox3.Clear();
+            textBox4.Clear();
+
             DisplayTableData();
         }
 
@@ -99,7 +109,7 @@ namespace CGrades
                             command.ExecuteNonQuery();
                         }
 
-                        // Consulta SQL para actualizar el nombre del profesor en la tabla "teachers"
+                        // Consulta SQL para actualizar el nombre del profesor en la tabla "students"
                         string updateTeacherQuery = "UPDATE students SET fullname = @Fullname WHERE user_id = @UserID";
 
                         using (SqlCommand teacherCommand = new SqlCommand(updateTeacherQuery, connection))
@@ -142,7 +152,7 @@ namespace CGrades
                             connection.Open();
 
                             // Consulta SQL para insertar un nuevo usuario
-                            string insertUserQuery = "INSERT INTO users (username, password, role) VALUES (@Username, @Password, 2); SELECT SCOPE_IDENTITY();";
+                            string insertUserQuery = "INSERT INTO users (username, password, role) VALUES (@Username, @Password, 3); SELECT SCOPE_IDENTITY();";
 
                             using (SqlCommand command = new SqlCommand(insertUserQuery, connection))
                             {

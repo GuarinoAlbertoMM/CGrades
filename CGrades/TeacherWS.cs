@@ -64,6 +64,12 @@ namespace CGrades
 
         private void subjectLoad(object sender, EventArgs e)
         {
+            // Deshabilitar los TextBox
+            textBox2.Enabled = false;   //nombre de asignatura
+
+            // Limpiar los TextBox
+            textBox2.Clear();
+
             DisplayTableData();
         }
 
