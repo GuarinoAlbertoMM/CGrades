@@ -20,7 +20,7 @@ namespace CGrades
         AdminWS adminWS = new AdminWS();
         TeacherWT teacherWT = new TeacherWT();
         TeacherWS teacherWS = new TeacherWS();
-        StudentWS studentWS = new StudentWS();
+
         public Login()
         {
             InitializeComponent();
@@ -94,7 +94,7 @@ namespace CGrades
             if (result is null)
             {
                 MessageBox.Show("Error: No existe el usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-           
+                return;
             }
 
             if (result.role == 1)
@@ -109,7 +109,9 @@ namespace CGrades
 
             if (result.role == 3)
             {
+                var studentWS = new StudentWS(result.id);
                 studentWS.Visible = true;
+                studentWS.Show();
             }
             
 

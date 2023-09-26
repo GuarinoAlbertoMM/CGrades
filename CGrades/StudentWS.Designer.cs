@@ -31,14 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentWS));
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.IdEstd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Asig = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Calificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.IdEstd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Asig = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Calificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -65,47 +65,17 @@
             this.Calificacion});
             this.dataGridView1.Location = new System.Drawing.Point(120, 204);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(992, 419);
             this.dataGridView1.TabIndex = 26;
             // 
-            // IdEstd
-            // 
-            this.IdEstd.HeaderText = "Id de estudiante";
-            this.IdEstd.MinimumWidth = 6;
-            this.IdEstd.Name = "IdEstd";
-            this.IdEstd.ReadOnly = true;
-            this.IdEstd.Width = 150;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.MinimumWidth = 6;
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 210;
-            // 
-            // Asig
-            // 
-            this.Asig.HeaderText = "Asignatura";
-            this.Asig.MinimumWidth = 6;
-            this.Asig.Name = "Asig";
-            this.Asig.ReadOnly = true;
-            this.Asig.Width = 260;
-            // 
-            // Calificacion
-            // 
-            this.Calificacion.HeaderText = "Calificación";
-            this.Calificacion.MinimumWidth = 6;
-            this.Calificacion.Name = "Calificacion";
-            this.Calificacion.ReadOnly = true;
-            this.Calificacion.Width = 210;
-            // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(120, 137);
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(400, 34);
             this.textBox2.TabIndex = 27;
             // 
@@ -136,6 +106,42 @@
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(133, 26);
             this.salirToolStripMenuItem.Text = "Salir";
             // 
+            // IdEstd
+            // 
+            this.IdEstd.DataPropertyName = "Id";
+            this.IdEstd.HeaderText = "Id de estudiante";
+            this.IdEstd.MinimumWidth = 6;
+            this.IdEstd.Name = "IdEstd";
+            this.IdEstd.ReadOnly = true;
+            this.IdEstd.Width = 150;
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "Name";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.MinimumWidth = 6;
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 210;
+            // 
+            // Asig
+            // 
+            this.Asig.DataPropertyName = "Subject";
+            this.Asig.HeaderText = "Asignatura";
+            this.Asig.MinimumWidth = 6;
+            this.Asig.Name = "Asig";
+            this.Asig.ReadOnly = true;
+            this.Asig.Width = 260;
+            // 
+            // Calificacion
+            // 
+            this.Calificacion.DataPropertyName = "Grade";
+            this.Calificacion.HeaderText = "Calificación";
+            this.Calificacion.MinimumWidth = 6;
+            this.Calificacion.Name = "Calificacion";
+            this.Calificacion.ReadOnly = true;
+            this.Calificacion.Width = 210;
+            // 
             // StudentWS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
@@ -153,6 +159,7 @@
             this.Name = "StudentWS";
             this.Text = "StudentWS";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.closeStudentW);
+            this.Load += new System.EventHandler(this.StudentLoad);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -165,13 +172,13 @@
 
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdEstd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Asig;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Calificacion;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdEstd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Asig;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Calificacion;
     }
 }
