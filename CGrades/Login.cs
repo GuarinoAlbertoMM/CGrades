@@ -44,10 +44,9 @@ namespace CGrades
 
         }
 
-        public object VerifiedUser(string username, string password)
+        public User VerifiedUser(string username, string password)
         {
-
-            string query = "SELECT * FROM users WHERE username = @Username AND password = @Password";
+            const string query = "SELECT * FROM users WHERE username = @Username AND password = @Password";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -59,28 +58,60 @@ namespace CGrades
                     command.Parameters.AddWithValue("@Username", username);
                     command.Parameters.AddWithValue("@Password", password);
 
-                    var valort = command.ExecuteScalar();
+
+                    var reader = command.ExecuteReader();
+                    
+                    reader.Read();
+                    
+                    User user = new User();
+
+                    user.role = (int)reader["role"];
+
+                    user.id = (int)reader["id"];
+
+                    //User valort = (User)command.ExecuteScalar();
+
+                    if (user != null )
+                    {
+                        return user;
+                    }
                 }
             }
+            return null;
+        }
 
-            return valort;
+        public class User
+        {
+            public int role { get; set; }
+
+            public int id { get; set; }
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            role = userId();
+            var result = VerifiedUser(textBox1.Text, textBox2.Text);
 
-            if (role == 1)
+
+            if (result is null)
+            {
+                MessageBox.Show("Error: No existe el usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+           
+            }
+
+            if (result.role == 1)
             {
                 adminWT.Visible = true;
             }
-            if (role == 2)
+
+            if (result.role == 2)
             {
                 teacherWT.Visible = true;
             }
-            if (role == 3)
+
+            if (result.role == 3)
             {
                 studentWS.Visible = true;
             }
+            
 
         }
 
@@ -92,7 +123,7 @@ namespace CGrades
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            VerifiedUser(textBox1.Text,textBox2.Text);
+            
         }
     }
 }
