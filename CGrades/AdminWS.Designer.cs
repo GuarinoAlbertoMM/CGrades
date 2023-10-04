@@ -44,7 +44,6 @@
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tablasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crearMaestrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.asignarCalificacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button4 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -183,14 +182,14 @@
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(133, 26);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // tablasToolStripMenuItem
             // 
             this.tablasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.crearMaestrosToolStripMenuItem,
-            this.asignarCalificacionesToolStripMenuItem});
+            this.crearMaestrosToolStripMenuItem});
             this.tablasToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.tablasToolStripMenuItem.Name = "tablasToolStripMenuItem";
             this.tablasToolStripMenuItem.Size = new System.Drawing.Size(77, 26);
@@ -200,14 +199,9 @@
             // crearMaestrosToolStripMenuItem
             // 
             this.crearMaestrosToolStripMenuItem.Name = "crearMaestrosToolStripMenuItem";
-            this.crearMaestrosToolStripMenuItem.Size = new System.Drawing.Size(272, 26);
+            this.crearMaestrosToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
             this.crearMaestrosToolStripMenuItem.Text = "Crear maestros";
-            // 
-            // asignarCalificacionesToolStripMenuItem
-            // 
-            this.asignarCalificacionesToolStripMenuItem.Name = "asignarCalificacionesToolStripMenuItem";
-            this.asignarCalificacionesToolStripMenuItem.Size = new System.Drawing.Size(272, 26);
-            this.asignarCalificacionesToolStripMenuItem.Text = "Asignar calificaciones";
+            this.crearMaestrosToolStripMenuItem.Click += new System.EventHandler(this.crearMaestrosToolStripMenuItem_Click);
             // 
             // button4
             // 
@@ -337,7 +331,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem tablasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem crearMaestrosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem asignarCalificacionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.Button button4;

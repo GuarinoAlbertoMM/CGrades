@@ -38,6 +38,12 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdEstd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Asig = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Calificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -46,12 +52,6 @@
             this.tablasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crearEstudiantesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button4 = new System.Windows.Forms.Button();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdEstd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Asig = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Calificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -153,6 +153,60 @@
             this.dataGridView1.Size = new System.Drawing.Size(992, 490);
             this.dataGridView1.TabIndex = 17;
             // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "id";
+            this.Column2.HeaderText = "Id";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 125;
+            // 
+            // IdEstd
+            // 
+            this.IdEstd.DataPropertyName = "student_id";
+            this.IdEstd.HeaderText = "Id de estudiante";
+            this.IdEstd.MinimumWidth = 6;
+            this.IdEstd.Name = "IdEstd";
+            this.IdEstd.ReadOnly = true;
+            this.IdEstd.Width = 150;
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "student_fullname";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.MinimumWidth = 6;
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 210;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "subject_id";
+            this.Column1.HeaderText = "Id de asignatura";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 125;
+            // 
+            // Asig
+            // 
+            this.Asig.DataPropertyName = "subject_name";
+            this.Asig.HeaderText = "Asignatura";
+            this.Asig.MinimumWidth = 6;
+            this.Asig.Name = "Asig";
+            this.Asig.ReadOnly = true;
+            this.Asig.Width = 200;
+            // 
+            // Calificacion
+            // 
+            this.Calificacion.DataPropertyName = "value";
+            this.Calificacion.HeaderText = "Calificación";
+            this.Calificacion.MinimumWidth = 6;
+            this.Calificacion.Name = "Calificacion";
+            this.Calificacion.ReadOnly = true;
+            this.Calificacion.Width = 125;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -200,8 +254,9 @@
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(133, 26);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // tablasToolStripMenuItem
             // 
@@ -217,6 +272,7 @@
             this.crearEstudiantesToolStripMenuItem.Name = "crearEstudiantesToolStripMenuItem";
             this.crearEstudiantesToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
             this.crearEstudiantesToolStripMenuItem.Text = "Crear asignaturas";
+            this.crearEstudiantesToolStripMenuItem.Click += new System.EventHandler(this.crearEstudiantesToolStripMenuItem_Click);
             // 
             // button4
             // 
@@ -229,59 +285,6 @@
             this.button4.Text = "Nuevo";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "id";
-            this.Column2.HeaderText = "Id";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // IdEstd
-            // 
-            this.IdEstd.DataPropertyName = "student_id";
-            this.IdEstd.HeaderText = "Id de estudiante";
-            this.IdEstd.MinimumWidth = 6;
-            this.IdEstd.Name = "IdEstd";
-            this.IdEstd.ReadOnly = true;
-            this.IdEstd.Width = 150;
-            // 
-            // Nombre
-            // 
-            this.Nombre.DataPropertyName = "student_fullname";
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.MinimumWidth = 6;
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 210;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "subject_id";
-            this.Column1.HeaderText = "Id de asignatura";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 125;
-            // 
-            // Asig
-            // 
-            this.Asig.DataPropertyName = "subject_name";
-            this.Asig.HeaderText = "Asignatura";
-            this.Asig.MinimumWidth = 6;
-            this.Asig.Name = "Asig";
-            this.Asig.ReadOnly = true;
-            this.Asig.Width = 200;
-            // 
-            // Calificacion
-            // 
-            this.Calificacion.DataPropertyName = "value";
-            this.Calificacion.HeaderText = "Calificación";
-            this.Calificacion.MinimumWidth = 6;
-            this.Calificacion.Name = "Calificacion";
-            this.Calificacion.ReadOnly = true;
-            this.Calificacion.Width = 125;
             // 
             // TeacherWT
             // 

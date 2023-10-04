@@ -32,6 +32,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -39,21 +44,13 @@
             this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.crearNuevaBaseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarBaseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tablasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tablaDeEstudiantesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crearEstudiantesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label5 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -97,6 +94,54 @@
             this.dataGridView1.Size = new System.Drawing.Size(992, 490);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "id";
+            this.Column1.HeaderText = "Id";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column1.Width = 125;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "user_id";
+            this.Column2.HeaderText = "Id de usuario";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column2.Width = 175;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "username";
+            this.Column4.HeaderText = "Usuario";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 175;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "password";
+            this.Column5.HeaderText = "Contraseña";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 175;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "fullname";
+            this.Column3.HeaderText = "Nombre completo";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column3.Width = 250;
             // 
             // textBox2
             // 
@@ -162,8 +207,6 @@
             // 
             this.toolStripMenuItem1.BackColor = System.Drawing.Color.DarkGray;
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.crearNuevaBaseDeDatosToolStripMenuItem,
-            this.eliminarBaseDeDatosToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.toolStripMenuItem1.ForeColor = System.Drawing.Color.Black;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
@@ -171,28 +214,16 @@
             this.toolStripMenuItem1.Text = "Archivo";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
-            // crearNuevaBaseDeDatosToolStripMenuItem
-            // 
-            this.crearNuevaBaseDeDatosToolStripMenuItem.Name = "crearNuevaBaseDeDatosToolStripMenuItem";
-            this.crearNuevaBaseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(302, 26);
-            this.crearNuevaBaseDeDatosToolStripMenuItem.Text = "Crear nueva base de datos";
-            // 
-            // eliminarBaseDeDatosToolStripMenuItem
-            // 
-            this.eliminarBaseDeDatosToolStripMenuItem.Name = "eliminarBaseDeDatosToolStripMenuItem";
-            this.eliminarBaseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(302, 26);
-            this.eliminarBaseDeDatosToolStripMenuItem.Text = "Eliminar base de datos";
-            // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(302, 26);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // tablasToolStripMenuItem
             // 
             this.tablasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tablaDeEstudiantesToolStripMenuItem,
             this.crearEstudiantesToolStripMenuItem});
             this.tablasToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.tablasToolStripMenuItem.Name = "tablasToolStripMenuItem";
@@ -200,18 +231,12 @@
             this.tablasToolStripMenuItem.Text = "Tablas";
             this.tablasToolStripMenuItem.Click += new System.EventHandler(this.tablasToolStripMenuItem_Click);
             // 
-            // tablaDeEstudiantesToolStripMenuItem
-            // 
-            this.tablaDeEstudiantesToolStripMenuItem.Name = "tablaDeEstudiantesToolStripMenuItem";
-            this.tablaDeEstudiantesToolStripMenuItem.Size = new System.Drawing.Size(296, 26);
-            this.tablaDeEstudiantesToolStripMenuItem.Text = "Asignar de calificaciones";
-            this.tablaDeEstudiantesToolStripMenuItem.Click += new System.EventHandler(this.tablaDeEstudiantesToolStripMenuItem_Click);
-            // 
             // crearEstudiantesToolStripMenuItem
             // 
             this.crearEstudiantesToolStripMenuItem.Name = "crearEstudiantesToolStripMenuItem";
-            this.crearEstudiantesToolStripMenuItem.Size = new System.Drawing.Size(296, 26);
+            this.crearEstudiantesToolStripMenuItem.Size = new System.Drawing.Size(231, 26);
             this.crearEstudiantesToolStripMenuItem.Text = "Crear estudiantes";
+            this.crearEstudiantesToolStripMenuItem.Click += new System.EventHandler(this.crearEstudiantesToolStripMenuItem_Click);
             // 
             // label5
             // 
@@ -260,54 +285,6 @@
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "id";
-            this.Column1.HeaderText = "Id";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column1.Width = 125;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "user_id";
-            this.Column2.HeaderText = "Id de usuario";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column2.Width = 175;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "username";
-            this.Column4.HeaderText = "Usuario";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 175;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "password";
-            this.Column5.HeaderText = "Contraseña";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 175;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "fullname";
-            this.Column3.HeaderText = "Nombre completo";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column3.Width = 250;
-            // 
             // AdminWT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
@@ -354,13 +331,10 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem crearNuevaBaseDeDatosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem eliminarBaseDeDatosToolStripMenuItem;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ToolStripMenuItem tablasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tablaDeEstudiantesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem crearEstudiantesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.Button button4;

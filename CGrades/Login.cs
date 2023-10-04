@@ -100,11 +100,13 @@ namespace CGrades
             if (result.role == 1)
             {
                 adminWT.Visible = true;
+                this.Hide();
             }
 
             if (result.role == 2)
             {
                 teacherWT.Visible = true;
+                this.Hide();
             }
 
             if (result.role == 3)
@@ -112,6 +114,7 @@ namespace CGrades
                 var studentWS = new StudentWS(result.id);
                 studentWS.Visible = true;
                 studentWS.Show();
+                this.Hide();
             }
             
 

@@ -195,9 +195,6 @@ namespace CGrades
                 }
                 else
                 {
-                    // Estás creando un nuevo registro, realiza la inserción en lugar de la actualización
-                    // Implementa la lógica para insertar un nuevo registro en la base de datos
-                    // Luego, limpia y deshabilita los TextBox y actualiza la vista de datos en el DataGridView
 
                     try
                     {
@@ -330,6 +327,23 @@ namespace CGrades
                 // Manejo de errores, muestra un mensaje en caso de error
                 MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void crearEstudiantesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Crear una instancia de la segunda ventana (form)
+            AdminWS studentCrationW = new AdminWS(); // Reemplaza 'SegundaVentana' con el nombre de tu formulario
+
+            // Mostrar la segunda ventana
+            studentCrationW.Show();
+
+            // Opcional: Ocultar la ventana actual si es necesario
+            this.Hide();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
