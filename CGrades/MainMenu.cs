@@ -36,5 +36,11 @@ namespace CGrades
         {
             Application.Exit();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            CreateDB dbCreator = new CreateDB();
+            dbCreator.DeleteAllTables();
+        }
     }
 }

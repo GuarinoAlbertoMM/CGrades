@@ -106,5 +106,48 @@ namespace CGrades
                 MessageBox.Show("Las tablas ya existen en la base de datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        public void DeleteAllTables()
+        {
+            // Cadena de conexión a la base de datos (asegúrate de que sea la base de datos correcta)
+            string connectionString = "Data Source=GUARI-PC\\SQLEXPRESS;Initial Catalog=CGrades;Integrated Security=True;";
+
+            // Lista de nombres de tablas a eliminar
+            string[] tableNames = { "grades", "students", "subjects", "teachers", "users" }; // Agrega aquí el nombre de todas las tablas que deseas eliminar
+
+            // Preguntar al usuario si realmente desea eliminar las tablas
+            DialogResult confirmResult = MessageBox.Show("¿Seguro que quieres eliminar todas las tablas de la base de datos?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (confirmResult == DialogResult.Yes)
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    foreach (string tableName in tableNames)
+                    {
+                        // Consulta SQL para eliminar la tabla
+                        string dropTableQuery = $"DROP TABLE IF EXISTS {tableName}";
+
+                        using (SqlCommand command = new SqlCommand(dropTableQuery, connection))
+                        {
+                            command.ExecuteNonQuery();
+                        }
+
+                        Console.WriteLine($"Tabla {tableName} eliminada.");
+                    }
+
+                    Console.WriteLine("Todas las tablas han sido eliminadas.");
+
+                    // Mostrar un mensaje de información después de eliminar las tablas
+                    MessageBox.Show("Todas las tablas han sido eliminadas.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                // El usuario eligió no eliminar las tablas
+                MessageBox.Show("Operación cancelada. No se eliminaron las tablas.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }
