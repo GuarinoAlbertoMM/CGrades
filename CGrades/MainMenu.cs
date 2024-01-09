@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Reporting.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,6 +42,20 @@ namespace CGrades
         {
             CreateDB dbCreator = new CreateDB();
             dbCreator.DeleteAllTables();
+        }
+
+        private void MainMenu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            // Crear una instancia de la segunda ventana (form)
+            TeacherReport teacherReport = new TeacherReport(); // Reemplaza 'SegundaVentana' con el nombre de tu formulario
+
+            // Mostrar la segunda ventana
+            teacherReport.Show();
         }
     }
 }
