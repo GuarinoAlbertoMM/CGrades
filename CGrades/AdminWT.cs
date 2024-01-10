@@ -13,7 +13,20 @@ using System.Windows.Forms;
 namespace CGrades
 {
     public partial class AdminWT : Form
-    {   
+    {
+        public void UpdateReports()
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                SqlCommand command = new SqlCommand("UpdateReports", connection);
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.ExecuteNonQuery();
+            }
+        }
+
         public AdminWT()
         {
             InitializeComponent();
@@ -192,6 +205,7 @@ namespace CGrades
 
                     // Actualizar la vista de datos en el DataGridView
                     DisplayTableData();
+                    UpdateReports();
                 }
                 else
                 {
@@ -242,6 +256,7 @@ namespace CGrades
                         DisplayTableData();
 
                         MessageBox.Show("Datos guardados correctamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        UpdateReports();
                     }
                     catch (Exception ex)
                     {
@@ -314,6 +329,7 @@ namespace CGrades
 
                             // Actualizar la vista de datos en el DataGridView después de eliminar
                             DisplayTableData();
+                            UpdateReports();
                         }
                     }
                 }
@@ -331,13 +347,10 @@ namespace CGrades
 
         private void crearEstudiantesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Crear una instancia de la segunda ventana (form)
-            AdminWS studentCrationW = new AdminWS(); // Reemplaza 'SegundaVentana' con el nombre de tu formulario
+            AdminWS studentCrationW = new AdminWS();
 
-            // Mostrar la segunda ventana
             studentCrationW.Show();
 
-            // Opcional: Ocultar la ventana actual si es necesario
             this.Hide();
         }
 

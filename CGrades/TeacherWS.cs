@@ -14,6 +14,19 @@ namespace CGrades
 {
     public partial class TeacherWS : Form
     {
+        public void UpdateReports()
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                SqlCommand command = new SqlCommand("UpdateReports", connection);
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.ExecuteNonQuery();
+            }
+        }
+
         public TeacherWS()
         {
             InitializeComponent();
@@ -114,6 +127,7 @@ namespace CGrades
 
                     // Actualizar la vista de datos en el DataGridView
                     DisplayTableData();
+                    UpdateReports();
                 }
                 else
                 {
@@ -146,6 +160,7 @@ namespace CGrades
                         textBox2.Clear();
 
                         DisplayTableData();
+                        UpdateReports();
 
                         MessageBox.Show("Datos guardados correctamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -217,6 +232,7 @@ namespace CGrades
 
                             // Actualizar la vista de datos en el DataGridView después de eliminar
                             DisplayTableData();
+                            UpdateReports();
                         }
                     }
                 }
@@ -234,13 +250,10 @@ namespace CGrades
 
         private void asignarCalificacionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Crear una instancia de la segunda ventana (form)
-            TeacherWT gradesAsigW = new TeacherWT(); // Reemplaza 'SegundaVentana' con el nombre de tu formulario
+            TeacherWT gradesAsigW = new TeacherWT();
 
-            // Mostrar la segunda ventana
             gradesAsigW.Show();
 
-            // Opcional: Ocultar la ventana actual si es necesario
             this.Hide();
         }
 

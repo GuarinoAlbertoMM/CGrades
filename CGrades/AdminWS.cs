@@ -13,6 +13,19 @@ namespace CGrades
 {
     public partial class AdminWS : Form
     {
+        public void UpdateReports()
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                SqlCommand command = new SqlCommand("UpdateReports", connection);
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.ExecuteNonQuery();
+            }
+        }
+
         public AdminWS()
         {
             InitializeComponent();
@@ -137,6 +150,7 @@ namespace CGrades
 
                     // Actualizar la vista de datos en el DataGridView
                     DisplayTableData();
+                    UpdateReports();
                 }
                 else
                 {
@@ -187,6 +201,7 @@ namespace CGrades
                         DisplayTableData();
 
                         MessageBox.Show("Datos guardados correctamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        UpdateReports();
                     }
                     catch (Exception ex)
                     {
@@ -282,6 +297,7 @@ namespace CGrades
 
                             // Actualizar la vista de datos en el DataGridView después de eliminar
                             DisplayTableData();
+                            UpdateReports();
                         }
                     }
                 }
@@ -299,13 +315,10 @@ namespace CGrades
 
         private void crearMaestrosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Crear una instancia de la segunda ventana (form)
-            AdminWT steacherCrationW = new AdminWT(); // Reemplaza 'SegundaVentana' con el nombre de tu formulario
+            AdminWT steacherCrationW = new AdminWT();
 
-            // Mostrar la segunda ventana
             steacherCrationW.Show();
 
-            // Opcional: Ocultar la ventana actual si es necesario
             this.Hide();
         }
 
