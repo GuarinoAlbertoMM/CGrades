@@ -6,16 +6,16 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>0.48333in</Width>
+              <Width>0.75in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.225in</Width>
+              <Width>1.60833in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.11667in</Width>
+              <Width>1.275in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.33333in</Width>
+              <Width>1.19167in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -35,7 +35,7 @@
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>14pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
+                                <FontWeight>SemiBold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -69,7 +69,7 @@
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>14pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
+                                <FontWeight>SemiBold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -103,7 +103,7 @@
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>14pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
+                                <FontWeight>SemiBold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -137,7 +137,7 @@
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>14pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
+                                <FontWeight>SemiBold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -175,7 +175,7 @@
                               <Value>=Fields!user_id.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>11pt</FontSize>
+                                <FontSize>12pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -208,7 +208,7 @@
                               <Value>=Fields!fullname.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>11pt</FontSize>
+                                <FontSize>12pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -241,7 +241,7 @@
                               <Value>=Fields!username.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>11pt</FontSize>
+                                <FontSize>12pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -274,7 +274,7 @@
                               <Value>=Fields!password.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>11pt</FontSize>
+                                <FontSize>12pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -318,10 +318,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>1.13833in</Top>
-        <Left>1.13833in</Left>
+        <Top>1.57167in</Top>
+        <Left>0.82167in</Left>
         <Height>0.5in</Height>
-        <Width>4.15833in</Width>
+        <Width>4.825in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -335,11 +335,11 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Lista de Maestros</Value>
+                <Value>Listado de Estudiantes</Value>
                 <Style>
                   <FontFamily>Times New Roman</FontFamily>
                   <FontSize>16pt</FontSize>
-                  <FontWeight>Heavy</FontWeight>
+                  <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -347,10 +347,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox9</rd:DefaultName>
-        <Top>0.22167in</Top>
-        <Left>2.13833in</Left>
-        <Height>0.36667in</Height>
-        <Width>1.825in</Width>
+        <Top>0.58833in</Top>
+        <Left>1.98in</Left>
+        <Height>0.33889in</Height>
+        <Width>2.3in</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -369,7 +369,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Estos son todos los maestros activos en la actualidad</Value>
+                <Value>Este es el listado de estudiantes activos</Value>
                 <Style>
                   <FontFamily>Times New Roman</FontFamily>
                   <FontSize>12pt</FontSize>
@@ -380,10 +380,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox10</rd:DefaultName>
-        <Top>0.68in</Top>
-        <Left>1.38833in</Left>
-        <Height>0.25in</Height>
-        <Width>3.675in</Width>
+        <Top>1.17167in</Top>
+        <Left>1.79667in</Left>
+        <Height>0.21667in</Height>
+        <Width>2.79167in</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -396,15 +396,15 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>3.11667in</Height>
+    <Height>3.63333in</Height>
     <Style>
       <Border>
         <Style>None</Style>
       </Border>
-      <BackgroundColor>DarkSeaGreen</BackgroundColor>
+      <BackgroundColor>LemonChiffon</BackgroundColor>
     </Style>
   </Body>
-  <Width>7.675in</Width>
+  <Width>8.03333in</Width>
   <Page>
     <LeftMargin>1in</LeftMargin>
     <RightMargin>1in</RightMargin>
@@ -414,23 +414,23 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="TeacherReportData">
+    <DataSource Name="StudentReportData">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>f5e4158a-3b8e-4585-b363-13f40bc1a873</rd:DataSourceID>
+      <rd:DataSourceID>b4d73e1a-52a3-4386-8efb-fa6e9938ae3f</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
     <DataSet Name="DataSet1">
       <Query>
-        <DataSourceName>TeacherReportData</DataSourceName>
+        <DataSourceName>StudentReportData</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="teacherreport_id">
-          <DataField>teacherreport_id</DataField>
+        <Field Name="studentreport_id">
+          <DataField>studentreport_id</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="fullname">
@@ -451,15 +451,15 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>TeacherReportData</rd:DataSetName>
-        <rd:SchemaPath>D:\UAPA\2023-T3\Programacion 2\Codes\vscode\CGrades\CGrades\TeacherReportData.xsd</rd:SchemaPath>
-        <rd:TableName>teachersreport</rd:TableName>
+        <rd:DataSetName>StudentReportData</rd:DataSetName>
+        <rd:SchemaPath>D:\UAPA\2023-T3\Programacion 2\Codes\vscode\CGrades\CGrades\StudentReportData.xsd</rd:SchemaPath>
+        <rd:TableName>studentsreport</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>teachersreportTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>studentsreportTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
-  <rd:ReportID>2342491d-ec52-4b07-b26d-5f52b9e8e7f1</rd:ReportID>
+  <rd:ReportID>bc94cb9e-37d4-4df2-aafd-871d6635b6c0</rd:ReportID>
 </Report>

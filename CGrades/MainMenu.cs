@@ -19,11 +19,9 @@ namespace CGrades
         }
 
         private void button2_Click(object sender, EventArgs e)
-        {
-            // Crear una instancia de la segunda ventana (form)
-            Login login = new Login(); // Reemplaza 'SegundaVentana' con el nombre de tu formulario
+        {    
+            Login login = new Login();
 
-            // Mostrar la segunda ventana
             login.Show();
         }
 
@@ -51,11 +49,26 @@ namespace CGrades
 
         private void button6_Click(object sender, EventArgs e)
         {
-            // Crear una instancia de la segunda ventana (form)
-            TeacherReport teacherReport = new TeacherReport(); // Reemplaza 'SegundaVentana' con el nombre de tu formulario
+            // Crea una instancia de la ventana del reporte de maestros
+            TeacherReport teacherReport = new TeacherReport();
 
-            // Mostrar la segunda ventana
             teacherReport.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            // Crea una instancia de la ventana del reporte de estudiantes
+            StudentReport studentReport = new StudentReport();
+
+            studentReport.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            // Crea una instancia de la ventana del reporte de calificaciones
+            GradeReport gradeReport = new GradeReport();
+
+            gradeReport.Show();
         }
     }
 }

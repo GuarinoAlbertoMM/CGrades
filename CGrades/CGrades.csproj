@@ -84,6 +84,17 @@
     </Compile>
     <Compile Include="CreateDB.cs" />
     <Compile Include="DBFunctions.cs" />
+    <Compile Include="GradeReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GradeReport.Designer.cs">
+      <DependentUpon>GradeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GradeReportData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GradeReportData.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +110,17 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="StudentReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentReport.Designer.cs">
+      <DependentUpon>StudentReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentReportData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudentReportData.xsd</DependentUpon>
+    </Compile>
     <Compile Include="StudentWS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +156,10 @@
     <EmbeddedResource Include="AdminWT.resx">
       <DependentUpon>AdminWT.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GradeReport.resx">
+      <DependentUpon>GradeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GradesReport.rdlc" />
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -149,6 +175,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="StudentReport.resx">
+      <DependentUpon>StudentReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentsReport.rdlc" />
     <EmbeddedResource Include="StudentWS.resx">
       <DependentUpon>StudentWS.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,6 +192,17 @@
     <EmbeddedResource Include="TeacherWT.resx">
       <DependentUpon>TeacherWT.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="GradeReportData.xsc">
+      <DependentUpon>GradeReportData.xsd</DependentUpon>
+    </None>
+    <None Include="GradeReportData.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GradeReportData.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="GradeReportData.xss">
+      <DependentUpon>GradeReportData.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -172,6 +213,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="StudentReportData.xsc">
+      <DependentUpon>StudentReportData.xsd</DependentUpon>
+    </None>
+    <None Include="StudentReportData.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StudentReportData.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="StudentReportData.xss">
+      <DependentUpon>StudentReportData.xsd</DependentUpon>
+    </None>
     <None Include="TeacherReportData.xsc">
       <DependentUpon>TeacherReportData.xsd</DependentUpon>
     </None>
